@@ -24,7 +24,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: CodeAnalysis@2
+- task: ShellScript@2
   inputs:
     scriptPath: codeanalysis.sh
     displayName: "Perform Code Analysis"  # friendly name displayed in the UI
