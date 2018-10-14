@@ -5,7 +5,9 @@ echo "Extracting Shiftleft Agent!"
 powershell -Command "& {Expand-Archive sl-latest-windows-x64.zip -DestinationPath . ;}"
 echo "Setting SL authentication parameters!"
 $BUILD_SOURCESDIRECTORY\\sl auth --org $ORGID --token $TOKENID
-echo %DATE% %TIME%
+echo $DayOfMonth
+echo $(DayOfMonth)
+echo $BUILD_DAYOFMONTH
 sleep 10
 echo "Performing Code Analysis!"
 $BUILD_SOURCESDIRECTORY\\sl analyze --app Hello-ShiftLeft-DevOps --cpg --csharp --dotnet-framework --csharp2cpg-args "-l info" "$BUILD_SOURCESDIRECTORY\\WebSite\WebSite.csproj"
