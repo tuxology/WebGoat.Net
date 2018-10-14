@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Hello World"
 curl -O https://www.shiftleft.io/download/sl-latest-windows-x64.zip
-tar x sl-latest-windows-x64.zip
+tar -xv sl-latest-windows-x64.zip
 set PATH=%cd%;%PATH%
 sl auth --org "fcf5e7a2-973f-4cff-b35b-62163909124d" --token "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NTk3Nzc3MDksImlzcyI6IlNoaWZ0TGVmdCIsIm9yZ0lEIjoiZmNmNWU3YTItOTczZi00Y2ZmLWIzNWItNjIxNjM5MDkxMjRkIiwic2NvcGVzIjpbImFwaTp2MiIsInVwbG9hZHM6d3JpdGUiLCJsb2c6d3JpdGUiLCJwaXBlbGluZXN0YXR1czpyZWFkIiwiYmxhY2tsaXN0czpyZWFkIiwicG9saWNpZXM6cmVhZCJdfQ.xcO5m5wi5PhDJ9bpodRXE6HiLdCnM-MJCiZhtR9JiXS-2PH6N_JvF3TK9MoPOy3e8XI64mJuqWXU3IGF2sNFrOBOfS6n7TV6FPBOjEyGIzXA4iiawsY42L4Xs_o7YyTQ7LYDGJzxKYsr2FUGjmk70R5-tzDeAqtgqTD7nr7_42NQNmIIHvUaOAy5X26C89huU5rWWjXeTtlfgvaftNnXW-2Tajys2JCBwTuD0xj4iuTLQ7hEoUdLxVxbdSJrH0xKwlhm-Q9PBj7iBVLd4dw8R5njRO_9aOvnnMwC2AaBUR7Y6G_K8PxNVb8YG4ccV67tuLhvivrxs4asIWNSwaHXxg"
 echo "AGENT_WORKFOLDER is $AGENT_WORKFOLDER"
