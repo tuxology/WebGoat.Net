@@ -4,8 +4,14 @@ curl -O https://www.shiftleft.io/download/sl-latest-windows-x64.zip
 echo "Extracting Shiftleft Agent!"
 powershell -Command "& {Expand-Archive sl-latest-windows-x64.zip -DestinationPath . ;}"
 echo "Setting SL authentication parameters!"
-echo $BUILD_ORGID
-echo $BUILD_TOKENID
+echo %BUILD_ORGID%
+echo %BUILD_TOKENID%
+echo %AGENT_ORGID%
+echo %AGENT_TOKENID%
+echo $AGENT_ORGID
+echo $AGENT_TOKENID
+echo $ORGID
+echo $TOKENID
 #$BUILD_SOURCESDIRECTORY\\sl auth --org $BUILD_ORGID --token $BUILD_TOKENID
 sleep 10
 echo "Performing Code Analysis"
