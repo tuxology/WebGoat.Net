@@ -10,8 +10,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  ShiftLeftAppName: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)
-
+  
 steps:
 - task: NuGetToolInstaller@0
   displayName: Install nuget tool
