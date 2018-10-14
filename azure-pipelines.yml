@@ -13,12 +13,15 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
+  displayName: Install nuget tool
 
 - task: NuGetCommand@2
+  displayName: Prep the build
   inputs:
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
+  displayName: Build the solution
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
@@ -28,8 +31,3 @@ steps:
   displayName: Perform Code Analysis
   inputs:
     scriptPath: codeanalysis.sh
-    #args: '' # Optional
-    #disableAutoCwd: false # Optional
-    #cwd: '' # Optional
-    #failOnStandardError: false
-
