@@ -25,9 +25,9 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: ShellScript@2
+  displayName: Perform Code Analysis
   inputs:
     scriptPath: codeanalysis.sh
-    displayName: Perform Code Analysis  # friendly name displayed in the UI
     #args: '' # Optional
     #disableAutoCwd: false # Optional
     #cwd: '' # Optional
