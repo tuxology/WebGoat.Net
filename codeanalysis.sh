@@ -7,6 +7,6 @@ echo "Setting SL authentication parameters!"
 $BUILD_SOURCESDIRECTORY\\sl auth --org $ORGID --token $TOKENID
 sleep 10
 echo "Performing Code Analysis!"
-$BUILD_SOURCESDIRECTORY\\sl analyze --app Hello-ShiftLeft-$BUILD_BUILDID --cpg --csharp --dotnet-framework --csharp2cpg-args "-l info" "$BUILD_SOURCESDIRECTORY\\WebSite\WebSite.csproj"
+$BUILD_SOURCESDIRECTORY\\sl analyze --app WebGoatNET-$BUILD_BUILDID --cpg --csharp --dotnet-framework --csharp2cpg-args "-l info" "$BUILD_SOURCESDIRECTORY\\WebSite\WebSite.csproj"
 sleep 10
 echo "Over and out."
