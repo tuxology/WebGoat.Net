@@ -28,6 +28,6 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: ShellScript@2
-  displayName: Perform Code Analysis!
+  displayName: Perform Code Analysis
   inputs:
     scriptPath: codeanalysis.sh
