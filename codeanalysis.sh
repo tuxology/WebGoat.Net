@@ -6,7 +6,7 @@ powershell -Command "& {Expand-Archive sl-latest-windows-x64.zip -DestinationPat
 echo "Setting SL authentication parameters!"
 $BUILD_SOURCESDIRECTORY\\sl auth --org $ORGID --token $TOKENID
 sleep 10
-echo "Perform Code Analysis!"
+echo "Perform Code Analysis"
 $BUILD_SOURCESDIRECTORY\\sl analyze --app WebGoatNET-$BUILD_BUILDID --wait --cpg --csharp --dotnet-framework --csharp2cpg-args "-l info" "$BUILD_SOURCESDIRECTORY\\WebSite\WebSite.csproj"
 sleep 10
 echo "Over and out."
